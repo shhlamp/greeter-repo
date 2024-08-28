@@ -1,0 +1,16 @@
+services:
+
+  recruit:
+    container_name: recruit_php
+    image: recruit/php
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/srv:cached
+    tty: true
+    command: "echo hello world"
+    deploy:
+      resources:
+        limits:
+          memory: 512M
