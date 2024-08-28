@@ -9,7 +9,6 @@ services:
     volumes:
       - .:/srv:cached
     tty: true
-    command: "echo hello world"
     deploy:
       resources:
         limits:
